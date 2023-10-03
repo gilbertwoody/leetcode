@@ -14,7 +14,7 @@ def find132pattern(nums)
     end
 
     left_min = nums[j] if nums[j] < left_min
-    right_all.delete(nums[j + 1])
+    (k = right_all.index(nums[j])) && right_all.delete_at(k)
   end
 
   false

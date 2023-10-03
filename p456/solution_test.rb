@@ -9,6 +9,7 @@ class SolutionTest < Minitest::Test
     assert(find132pattern([3,1,4,2]))
     assert(find132pattern([-1,3,2,0]))
     assert(find132pattern([1,4,0,-1,-2,-3,-1,-2]))
+    assert(find132pattern([-2,1,2,-2,1,2]))
     assert(true)
   end
 end
