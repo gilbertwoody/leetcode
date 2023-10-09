@@ -18,6 +18,7 @@ code --install-extension rebornix.ruby
 code --install-extension shopify.ruby-lsp
 code --install-extension loichisasada.vscode-rdbg
 code --install-extension wingrunr21.vscode-ruby
+code --install-extension koichisasada.vscode-rdbg
 ```
 
 ## Place vscode user settings
