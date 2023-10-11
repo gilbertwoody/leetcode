@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
-require_relative "solution"
+require_relative "solution2"
 
 class SolutionTest < Minitest::Test
   def test_simple
