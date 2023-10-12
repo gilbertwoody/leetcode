@@ -1,6 +1,9 @@
 {
   "image": "mcr.microsoft.com/devcontainers/ruby:3.1",
   "features": {
+	"ghcr.io/devcontainers/features/sshd:1": {
+        "version": "latest"
+    },
   },
   "customizations": {
 		// Configure properties specific to VS Code.
