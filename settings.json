@@ -1,11 +1,11 @@
 {
     "http.proxySupport": "on",
-    "workbench.startupEditor": "none",
-    "extensions.autoCheckUpdates": false,
-    "extensions.autoUpdate": false,
-    "update.mode": "none",
-    "update.showReleaseNotes": false,
-    "update.enableWindowsBackgroundUpdates": false,
+    // "workbench.startupEditor": "none",
+    // "extensions.autoCheckUpdates": false,
+    // "extensions.autoUpdate": false,
+    // "update.mode": "none",
+    // "update.showReleaseNotes": false,
+    // "update.enableWindowsBackgroundUpdates": false,
     "workbench.colorTheme": "Default Light Modern",
     "launch": {
         "configurations": [
