@@ -39,5 +39,5 @@ def validate_binary_tree_nodes(n, left_child, right_child)
   end
 
   dfs[root]
-  adj.values.sum { |a| a.count } == n - 1
+  visited.size == adj.values.sum(&:size)  + 1  
 end
