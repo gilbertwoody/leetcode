@@ -25,10 +25,14 @@
 class NestedIterator
   # @param {NestedInteger[]} nested_list
   def initialize(nested_list)
-    l = nested_list.map do |ni|
-      flatten_nested_integer(ni)
+    flatten_nested = lambda do |nested_integer|
+      if nested_integer.is_integer
+        nested_integer.get_integer
+      else
+        nested_integer.get_list.flat_map(&flatten_nested)
+      end
     end
-    @list = l.flatten
+    @list = nested_list.flat_map(&flatten_nested)
   end
 
   # @return {Boolean}
@@ -39,18 +43,6 @@ class NestedIterator
   # @return {Integer}
   def next
     @list.shift  
-  end
-end
-
-def flatten_nested_integer(nested_integer)
-  result = []
-  if nested_integer.is_integer
-    nested_integer.get_integer
-  else
-    list = nested_integer.get_list.map do |ni|
-      flatten_nested_integer(ni)
-    end
-    list.flatten
   end
 end
 
