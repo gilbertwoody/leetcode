@@ -38,7 +38,7 @@
 				"terminal.integrated.allowChords": false,
 				"editor.tabSize": 2,
 			},
-			"extensions": ["tuttieee.emacs-mcx", "koichisasada.vscode-rdbg"]
+			"extensions": ["lfs.vscode-emacs-friendly", "koichisasada.vscode-rdbg"]
 		}
 }
 }
