@@ -11,11 +11,12 @@ def num_factored_binary_trees(arr)
     0.upto(j-1) do |i|
       m = arr[i]
       break if m > Math.sqrt(n)
+
       q, r = n.divmod(m)
       if r.zero? && arr.include?(q)
         c = count_roots[q] * count_roots[m]
-        count += c
-        count += c unless q == m
+        k = q == m ? 1 : 2
+        count += k * c
         count %= 1_000_000_007
       end
     end
