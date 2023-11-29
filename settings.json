@@ -7,23 +7,6 @@
     // "update.showReleaseNotes": false,
     // "update.enableWindowsBackgroundUpdates": false,
     "workbench.colorTheme": "Default Light Modern",
-    "launch": {
-        "configurations": [
-            {
-                "type": "rdbg",
-                "name": "Debug current file with rdbg",
-                "request": "launch",
-                "script": "${file}",
-                "args": [],
-                "askParameters": true
-            },
-            {
-                "type": "rdbg",
-                "name": "Attach with rdbg",
-                "request": "attach"
-            }
-        ]
-    },
     "terminal.integrated.allowChords": false,
     "editor.tabSize": 2,
 }

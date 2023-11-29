@@ -15,7 +15,6 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
     ```sh
     code --install-extension tuttieee.emacs-mcx
     code --install-extension shopify.ruby-lsp
-    code --install-extension KoichiSasada.vscode-rdbg
     ```
 
 4. Place vscode user settings
