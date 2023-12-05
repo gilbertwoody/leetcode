@@ -4,10 +4,12 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
 1. Install Ruby
     ```sh
     sudo apt install ruby ri ruby-dev bundler libyaml-dev code
+    sudo dnf install ruby @development ruby-devel libyaml-devel
     ```
 
 2. Install gems
     ```sh
+    bundle config set --local path vendor/bundle
     bundle install
     ```
 
@@ -22,7 +24,8 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
     cp settings.json ~/.config/Code/User/
     ```
 
-5. (Optional) Remove unnecessary packages
+5. (Optional for raspberry pi) Remove unnecessary packages
     ```sh
     sudo apt purge --autoremove dillo* htop geany* thonny*
     ```
+    
