@@ -3,7 +3,7 @@
   "features": {
 		"ghcr.io/devcontainers/features/sshd:1": {
     	"version": "latest"
-    },
+    }
   },
 	"containerEnv" : { "TZ": "Asia/Shanghai" },
   "customizations": {
@@ -22,7 +22,7 @@
 				"terminal.integrated.allowChords": false,
 				"editor.tabSize": 2,
 			},
-			"extensions": ["lfs.vscode-emacs-friendly", "koichisasada.vscode-rdbg"]
+			"extensions": ["lfs.vscode-emacs-friendly", "shopify.ruby-lsp"]
 		}
 }
 }
