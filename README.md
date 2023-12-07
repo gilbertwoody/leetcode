@@ -1,10 +1,10 @@
 ## Leetcode solution in Ruby
 Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 and 3.
 
-1. Install Ruby
+1. Install Ruby and vscode
     ```sh
     sudo apt install ruby ri ruby-dev bundler libyaml-dev code
-    sudo dnf install ruby @development ruby-devel libyaml-devel
+    sudo dnf install @c-development ruby rubygem-bundler ruby-devel libyaml-devel code
     ```
 
 2. Install gems
@@ -24,8 +24,13 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
     cp settings.json ~/.config/Code/User/
     ```
 
-5. (Optional for raspberry pi) Remove unnecessary packages
+5. (Optional) Remove unnecessary packages
     ```sh
+    # Raspberry pi
     sudo apt purge --autoremove dillo* htop geany* thonny*
+    # Fedora
+    sudo dnf erase nano gnome-boxes libreoffice* rhythmbox gnome-maps \
+      gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
+      spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} ibus-anthy
     ```
     
