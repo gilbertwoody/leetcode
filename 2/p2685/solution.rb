@@ -13,15 +13,14 @@ def find_max_fish(grid)
     result
   end
   
-  visited = Set.new
-  dfs = lambda do |i, j|
+  dfs = lambda do |i, j, visited = Set.new|
     return 0 if visited.include?([i, j])
     return 0 if grid[i][j].zero?
 
     visited << [i, j]
     count = grid[i][j]
     neighbors[i, j].each do |x, y|
-      count += dfs[x, y]
+      count += dfs[x, y, visited]
     end
 
     visited << [i, j]

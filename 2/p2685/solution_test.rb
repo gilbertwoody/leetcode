@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-require "test_helper"
+require "minitest/autorun"
+require_relative "solution"
 
 class SolutionTest < Minitest::Test
   def test_simple
