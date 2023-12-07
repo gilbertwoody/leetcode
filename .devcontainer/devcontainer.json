@@ -5,6 +5,7 @@
     	"version": "latest"
     },
   },
+	"containerEnv" : { "TZ": "Asia/Shanghai" },
   "customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
