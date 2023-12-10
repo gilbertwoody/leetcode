@@ -1,9 +1,11 @@
-## Leetcode solution in Ruby
-Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 and 3.
+## Leetcode solutions in Ruby
+Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 3.
 
 1. Install Ruby and vscode
     ```sh
+    # Debian
     sudo apt install ruby ri ruby-dev bundler libyaml-dev code
+    # Fedora
     sudo dnf install @c-development ruby rubygem-bundler ruby-devel libyaml-devel code
     ```
 
@@ -24,7 +26,7 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
     cp settings.json ~/.config/Code/User/
     ```
 
-5. (Optional) Remove unnecessary packages
+5. (Optional) Remove some packages
     ```sh
     # Raspberry pi
     sudo apt purge --autoremove dillo* htop geany* thonny*
@@ -33,4 +35,3 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 1 an
       gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
       spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} ibus-anthy
     ```
-    
