@@ -33,5 +33,6 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 3.
     # Fedora
     sudo dnf erase nano gnome-boxes libreoffice* rhythmbox gnome-maps \
       gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
-      spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} ibus-anthy
+      spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} \
+      ibus-anthy zenity
     ```
