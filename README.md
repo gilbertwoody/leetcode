@@ -1,6 +1,4 @@
 ## Leetcode solutions in Ruby
-Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 3.
-
 1. Install Ruby and vscode
     ```sh
     # Debian
@@ -21,12 +19,12 @@ Mostly done on my lovely raspberry pi 400. For Github Codespaces, skip step 3.
     code --install-extension shopify.ruby-lsp
     ```
 
-4. Place vscode user settings
+5. Place vscode user settings
     ```sh
     cp settings.json ~/.config/Code/User/
     ```
 
-5. (Optional) Remove some packages
+8. (Optional) Remove some packages
     ```sh
     # Raspberry pi
     sudo apt purge --autoremove dillo* htop geany* thonny*
