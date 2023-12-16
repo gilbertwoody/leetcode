@@ -11,5 +11,5 @@ def least_bricks(wall)
     end
   end
 
-  gaps.empty? ? n : n - gaps.values.max
+  n - gaps.values.max.to_i
 end
