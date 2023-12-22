@@ -32,5 +32,6 @@
     sudo dnf erase nano gnome-boxes libreoffice* rhythmbox gnome-maps \
       gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
       spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} \
-      ibus-anthy zenity
+      ibus-anthy zenity xorg-x11-server-Xorg amd-gpu-firmware \
+      atheros-firmware qemu* tigervnc-server-minimal tmux
     ```
