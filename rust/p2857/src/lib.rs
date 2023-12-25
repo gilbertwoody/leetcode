@@ -15,12 +15,12 @@ impl Solution {
                 let x2 = x ^ x1;
                 let y2 = (k - x) ^ y1;
 
-                if let Some(c) = known.get(&vec![x2, y2]) {
+                if let Some(c) = known.get(&(x2, y2)) {
                     count += c;
                 }
             }
 
-            *known.entry(vec![x1, y1]).or_insert(0) += 1;
+            *known.entry((x1, y1)).or_insert(0) += 1;
         }
 
         count
