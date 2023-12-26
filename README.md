@@ -3,6 +3,9 @@
     ```sh
     # Debian
     sudo apt install ruby ri ruby-dev bundler libyaml-dev code
+    # AlmaLinux 9
+    sudo dnf config-manager --set-enabled crb
+    sudo dnf install @development ruby rubygem-bundler ruby-devel libyaml-devel code
     # Fedora
     sudo dnf install @c-development ruby rubygem-bundler ruby-devel libyaml-devel code
     ```
