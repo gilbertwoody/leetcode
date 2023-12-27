@@ -1,3 +1,5 @@
+require "set"
+
 # @param {Integer[]} parents
 # @param {Integer[]} nums
 # @return {Integer[]}
