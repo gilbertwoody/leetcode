@@ -36,5 +36,7 @@
       gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
       spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} \
       ibus-anthy zenity xorg-x11-server-Xorg amd-gpu-firmware \
-      atheros-firmware qemu* tigervnc-server-minimal tmux
+      atheros-firmware qemu* tigervnc-server-minimal tmux \
+      qpdf-libs libertas-firmware nvidia-gpu-firmware mediawriter \
+      gnome-user-share toolbox mt7xxx-firmware tcpdump gnome-classic-session
     ```
