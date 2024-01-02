@@ -8,7 +8,8 @@ def get_length_of_optimal_compression(s, k)
     return Float::INFINITY if remain.negative?
     return 0 if start + remain >= s.size
 
-    memo = table[[start, remain, last, last_count]]
+    key = [start, remain, last, last_count]
+    memo = table[key]
     return memo if memo
 
     result = if s[start] == last
@@ -21,7 +22,7 @@ def get_length_of_optimal_compression(s, k)
       reserv < remove ? reserv : remove
     end
 
-    table[[start, remain, last, last_count]] = result 
+    table[key] = result 
   end
   
   optimal_length[0, k, 26, 0]
