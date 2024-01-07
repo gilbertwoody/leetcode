@@ -24,12 +24,7 @@
     code --install-extension shopify.ruby-lsp
     ```
 
-5. Place vscode user settings
-    ```sh
-    cp settings.json ~/.config/Code/User/
-    ```
-
-8. (Optional) Remove some packages
+5. (Optional) Remove some packages
     ```sh
     # Raspberry pi
     sudo apt purge --autoremove dillo* htop geany* thonny*
