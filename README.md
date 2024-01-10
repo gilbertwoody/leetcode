@@ -9,7 +9,7 @@
     # WSL
     sudo dnf install @fonts
     # Fedora
-    sudo dnf install @c-development ruby rubygem-bundler ruby-devel libyaml-devel code
+    sudo dnf install @c-development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
     ```
 
 2. Install gems
