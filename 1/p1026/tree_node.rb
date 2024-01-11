@@ -7,7 +7,7 @@ class TreeNode
       @right = right
   end
 
-  def TreeNode.from_array(a)
+  def self.from_array(a)
     root = TreeNode.new(a[0])
     q = [root]
     (1..a.size - 1).step(2) do |i|
