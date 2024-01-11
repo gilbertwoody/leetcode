@@ -5,7 +5,7 @@
     sudo apt install ruby ri ruby-dev bundler libyaml-dev code
     # AlmaLinux 9
     sudo dnf config-manager --set-enabled crb
-    sudo dnf install @development ruby rubygem-bundler ruby-devel libyaml-devel code
+    sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
     # WSL
     sudo dnf install @fonts
     # Fedora
