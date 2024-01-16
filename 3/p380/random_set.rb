@@ -1,7 +1,6 @@
 class RandomizedSet
   def initialize()
     @vals = []
-    @next = 0
     @val_index = {}
   end
 
@@ -12,10 +11,9 @@ class RandomizedSet
   def insert(val)
     return false if @val_index.key?(val)
 
+    @val_index[val] = @vals.size
     @vals << val
-    @val_index[val] = @next
-    @next += 1
-
+    
     true
   end
 
@@ -28,13 +26,13 @@ class RandomizedSet
 
     idx = @val_index[val]
     last = @vals.pop
-    unless idx == @next - 1
+    @val_index.delete(val)
+
+    unless idx == @vals.size
       @val_index[last] = idx
       @vals[idx] = last
     end
-    @val_index.delete(val)
-    @next -= 1
-
+          
     true
   end
 
@@ -42,7 +40,7 @@ class RandomizedSet
   :rtype: Integer
 =end
   def get_random()
-    @vals[Random.rand(@next)]
+    @vals[Random.rand(@vals.size)]
   end
 end
 
