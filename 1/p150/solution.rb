@@ -7,8 +7,8 @@ def eval_rpn(tokens)
     in "+" | "-" | "*" | "/"
       op2 = stack.pop
       op1 = stack.pop
-      if tok == "/"
-        (op1.positive? ^ op2.positive?) ? -(-op1/op2) : op1/op2
+      if tok == "/" && (op1.positive? ^ op2.positive?) 
+        -(-op1/op2)
       else
         tok.to_sym.to_proc[op1, op2]
       end
