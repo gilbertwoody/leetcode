@@ -16,5 +16,5 @@
         "editor.semanticHighlighting.enabled": true,    // Enable semantic highlighting
         "editor.formatOnType": true                     // Enable formatting while typing
     },
-    "rubyLsp.bundleGemfile": "/home/jie/Documents/leetcode/Gemfile"
+    "rubyLsp.bundleGemfile": "Gemfile"
 }
