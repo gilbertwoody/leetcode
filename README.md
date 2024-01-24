@@ -1,4 +1,6 @@
 ## Leetcode solutions in Ruby
+1. [Setup Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
+
 1. Install Ruby and vscode
     ```sh
     # Debian
@@ -8,8 +10,6 @@
     sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
     # WSL
     sudo dnf install @fonts
-    # Fedora
-    sudo dnf install @c-development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
     ```
 
 2. Install gems
@@ -22,18 +22,4 @@
     ```sh
     code --install-extension tuttieee.emacs-mcx
     code --install-extension shopify.ruby-lsp
-    ```
-
-5. (Optional) Remove some packages
-    ```sh
-    # Raspberry pi
-    sudo apt purge --autoremove dillo* htop geany* thonny*
-    # Fedora
-    sudo dnf erase nano gnome-boxes libreoffice* rhythmbox gnome-maps \
-      gnome-weather virtualbox-guest-additions open-vm-tools hyperv* \
-      spice-vdagent ibus-hangul libhangul {ibus-,}{libzhuyin,libpinyin} \
-      ibus-anthy zenity xorg-x11-server-Xorg amd-gpu-firmware \
-      atheros-firmware qemu* tigervnc-server-minimal tmux \
-      qpdf-libs libertas-firmware nvidia-gpu-firmware mediawriter \
-      gnome-user-share toolbox mt7xxx-firmware tcpdump gnome-classic-session
     ```
