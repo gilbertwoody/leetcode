@@ -1,16 +1,22 @@
 ## Leetcode solutions in Ruby
-1. [Setup Visual Studio Code](https://code.visualstudio.com/docs/setup/linux)
+1. [Setup](https://code.visualstudio.com/docs/setup/linux) Visual Studio Code package repository
 
 1. Install Ruby and vscode
-    ```sh
-    # Debian
-    sudo apt install ruby ri ruby-dev bundler libyaml-dev code
-    # AlmaLinux 9
-    sudo dnf config-manager --set-enabled crb
-    sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
-    # WSL
-    sudo dnf install @fonts
-    ```
+    * Debian
+      ```sh
+      sudo apt install ruby ri ruby-dev bundler libyaml-dev code
+      ```
+    * AlmaLinux 9
+      ```sh
+      sudo dnf config-manager --set-enabled crb
+      sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
+      # For WSL
+      sudo dnf install @fonts
+      ```
+    * FreeBSD
+      ```sh
+      pkg install ruby rubygem-{bundler,ruby-lsp,minitest,debug,algorithms} vscode
+      ```
 
 2. Install gems
     ```sh
