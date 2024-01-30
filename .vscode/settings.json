@@ -1,5 +1,4 @@
 {
-    "http.proxySupport": "on",
     "workbench.colorTheme": "Default Light Modern",
     "terminal.integrated.allowChords": false,
     "[ruby]": {
