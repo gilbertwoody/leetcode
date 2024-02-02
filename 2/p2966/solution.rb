@@ -2,9 +2,6 @@
 # @param {Integer} k
 # @return {Integer[][]}
 def divide_array(nums, k)
-  n = nums.size 
-  return [] if n % 3 != 0
-
   nums.sort!
   result = []
   
