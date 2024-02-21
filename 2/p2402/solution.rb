@@ -9,29 +9,30 @@ def most_booked(n, meetings)
   meetings.sort_by!(&:first)
 
   room_count = Array.new(n, 0)
-  heap = MinHeap.new
+  ongoing_meeting = MinHeap.new
+  available_room = MinHeap.new((0...n).to_a)
 
   meetings.each do |s, e|
-    i = heap.size
-    until heap.empty? || heap.next.first > s
-      _, j = heap.pop
-      i = j if j < i
+    until ongoing_meeting.empty? || ongoing_meeting.next.first > s
+      available_room << ongoing_meeting.pop.last
     end
 
-    if heap.size == n
-      e1, i = heap.pop
+    if available_room.empty? 
+      e1, i = ongoing_meeting.pop
       e += e1 - s if e1 > s
+    else
+      i = available_room.pop
     end
 
-    heap << [e, i]
+    ongoing_meeting << [e, i]
     room_count[i] += 1
   end
 
   max, maxi = -1, -1
   room_count.each_with_index do |count, i|
-    if count > max
+    if count > max 
       max, maxi = count, i
-    end
+    end  
   end
 
   maxi
