@@ -9,15 +9,9 @@ def largest_perimeter(nums)
     prefix_sum << prefix_sum[-1] + x
   end
 
-  prefix_sum.shift
-  1.upto(nums.size - 2) do |i|
-    sum = prefix_sum[i]
-    j = nums.rindex { |element| element < sum }
-    if j > i
-      meter = sum + nums[j]
-      largest = meter if meter > largest
-    end
+  nums.size.downto(3) do |i|
+    return prefix_sum[i] if prefix_sum[i] < 2 * prefix_sum[i-1]
   end
 
-  largest
+  return -1
 end
