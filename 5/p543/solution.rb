@@ -1,16 +1,18 @@
 # @param {TreeNode} root
 # @return {Integer}
 def diameter_of_binary_tree(root)
-  return 0 if root.nil?
+  max = -1
+  depth = lambda do |node|
+    return -1 if node.nil?
 
-  [diameter_of_binary_tree(root.left),
-   diameter_of_binary_tree(root.right),
-   depth(root.left) + depth(root.right) + 2].max
+    l = depth[node.left]
+    r = depth[node.right]
+    p = l + r + 2
+    max = p if p > max
 
-end
+    1 + [l, r].max
+  end
 
-def depth(root)
-  return -1 if root.nil?
-
-  1 + [depth(root.left), depth(root.right)].max
+  depth[root]
+  max
 end
