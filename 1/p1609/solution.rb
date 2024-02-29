@@ -2,7 +2,8 @@
 # @return {Boolean}
 def is_even_odd_tree(root)
   prev_val_of_level = Hash.new { |h, k| h[k] = k.even? ? 0 : 1_000_001 }
-  traverse = proc do |node, d|
+
+  traverse = proc do |node, d = 0|
     unless node.nil?
       val, prev = node.val, prev_val_of_level[d]
 
@@ -12,9 +13,10 @@ def is_even_odd_tree(root)
       prev_val_of_level[d] = val
       traverse[node.left, d + 1]
       traverse[node.right, d + 1]
+
+      true
     end
   end
 
-  traverse[root, 0]
-  true
+  traverse[root]
 end
