@@ -4,10 +4,9 @@
 def num_subarray_product_less_than_k(nums, k)
   return 0 if k <= 1
 
-  count = 0
   p = 1
   left = 0
-  0.upto(nums.size - 1) do |right|
+  (0...nums.size).reduce(0) do |memo, right|
     p *= nums[right]
 
     while p >= k
@@ -15,8 +14,6 @@ def num_subarray_product_less_than_k(nums, k)
       left += 1
     end
 
-    count += right - left + 1
+    memo + right - left + 1
   end
-
-  count
 end
