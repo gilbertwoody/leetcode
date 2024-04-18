@@ -10,7 +10,7 @@
 * Linux
   1. [Setup](https://code.visualstudio.com/docs/setup/linux) Visual Studio Code package repository
 
-  1. Install Ruby and vscode
+  2. Install Ruby and vscode
     * Debian
       ```sh
       sudo apt install ruby ri ruby-dev bundler libyaml-dev code
@@ -21,7 +21,7 @@
       sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
       ```
 
-  2. Install gems
+  3. Install gems
       ```sh
       bundle config set --local path vendor/bundle
       bundle install
