@@ -7,5 +7,6 @@
         "editor.insertSpaces": true,
         "editor.semanticHighlighting.enabled": true
     },
-    "rubyLsp.bundleGemfile": "Gemfile"
+    "rubyLsp.bundleGemfile": "Gemfile",
+    "dev.containers.dockerPath": "podman",
 }

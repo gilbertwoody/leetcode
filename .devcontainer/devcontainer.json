@@ -1,12 +1,11 @@
 {
-    "features": {
-        "ghcr.io/devcontainers/features/sshd:1": {
-            "version": "latest"
-        }
-    },
+    "image": "docker.io/almalinux/9-base",
     "containerEnv": {
         "TZ": "Asia/Shanghai"
     },
+    "workspaceMount": "",
+	"runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
+    "postCreateCommand": "sh .devcontainer/post.sh",
     "customizations": {
         "vscode": {            
             "settings": {
