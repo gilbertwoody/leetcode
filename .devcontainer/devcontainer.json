@@ -12,6 +12,7 @@
     },
     "workspaceMount": "",
 	"runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
+    "postCreateCommand": "bundle install",
     "customizations": {
         "vscode": {            
             "settings": {

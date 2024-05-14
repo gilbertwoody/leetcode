@@ -1,8 +1,13 @@
-FROM docker.io/almalinux/9-base
+FROM docker.io/ruby
 
-RUN dnf install -y 'dnf-command(config-manager)'
-RUN dnf config-manager --set-enabled crb 
-RUN dnf config-manager --add-repo https://cli.github.com/packages/rpm/gh-cli.repo
-RUN dnf install -y gh
-RUN dnf install -y ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel
-RUN dnf install -y @development
+RUN <<EOF
+apt update 
+apt-get install wget -y
+mkdir -p -m 755 /etc/apt/keyrings
+wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg > /etc/apt/keyrings/githubcli-archive-keyring.gpg 
+chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
+echo -n 'deb [signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] ' >> /etc/apt/sources.list.d/github-cli.list
+echo -n 'https://cli.github.com/packages stable main' >> /etc/apt/sources.list.d/github-cli.list
+apt update
+apt install gh -y
+EOF
