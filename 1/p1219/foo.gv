@@ -1,0 +1,20 @@
+digraph M {
+	matrix [shape=none, margin=0, label=<
+		<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="4">
+		<TR>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">0</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">6</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">0</TD>
+		</TR>
+		<TR>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">5</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">8</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">7</TD>
+		</TR>
+		<TR>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">0</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">9</TD>
+		<TD FIXEDSIZE="true" WIDTH="40" HEIGHT="40">0</TD>
+		</TR>
+		</TABLE>>]
+	}
