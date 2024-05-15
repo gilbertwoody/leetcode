@@ -1,12 +1,11 @@
 {
     "workbench.colorTheme": "Default Light Modern",
     "terminal.integrated.allowChords": false,
+    "editor.insertSpaces": true,
     "[ruby]": {
         "editor.defaultFormatter": "Shopify.ruby-lsp",
         "editor.tabSize": 2,
-        "editor.insertSpaces": true,
         "editor.semanticHighlighting.enabled": true
     },
     "rubyLsp.bundleGemfile": "Gemfile",
-    "dev.containers.dockerPath": "podman",
 }
