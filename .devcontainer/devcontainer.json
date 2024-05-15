@@ -11,7 +11,7 @@
         "TZ": "Asia/Shanghai"
     },
     "workspaceMount": "",
-	"runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
+    "runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
     "postCreateCommand": "bundle install",
     "customizations": {
         "vscode": {            
