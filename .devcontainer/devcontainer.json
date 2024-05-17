@@ -1,6 +1,7 @@
 {
     "name": "leetcode",
     "build": {
+        "context": "..",
         "dockerfile": "Dockerfile",
         "args": {
             "http_proxy": "${localEnv:http_proxy}",
@@ -12,25 +13,9 @@
     },
     "workspaceMount": "",
     "runArgs": ["--volume=${localWorkspaceFolder}:/workspaces/${localWorkspaceFolderBasename}:Z"],
-    "postCreateCommand": "bundle install",
     "customizations": {
-        "vscode": {            
-            "settings": {
-                "http.proxySupport": "on",
-                "workbench.colorTheme": "Default Light Modern",
-                "terminal.integrated.allowChords": false,
-                "editor.insertSpaces": true,
-                "[ruby]": {
-                    "editor.defaultFormatter": "Shopify.ruby-lsp",
-                    "editor.tabSize": 2,
-                    "editor.semanticHighlighting.enabled": true
-                },
-                "rubyLsp.bundleGemfile": "Gemfile"
-            },
-            "extensions": [
-                "lfs.vscode-emacs-friendly",
-                "shopify.ruby-lsp"
-            ]
+        "vscode": {
+            "extensions": ["Shopify.ruby-lsp"]
         }
     }
 }
