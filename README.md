@@ -1,34 +1,32 @@
-### Leetcode solutions in Ruby
-#### Packages/Gems
-* FreeBSD
-    ```sh
-    pkg install ruby rubygem-{bundler,ruby-lsp,minitest,debug,algorithms} vscode
-    vscode --install-extension tuttieee.emacs-mcx
-    vscode --install-extension shopify.ruby-lsp
-    ```
-
-* Linux
-  1. [Setup](https://code.visualstudio.com/docs/setup/linux) Visual Studio Code package repository
-
-  2. Install Ruby and vscode
-    * Debian
-      ```sh
-      sudo apt install ruby ri ruby-dev bundler libyaml-dev code
-      ```
-    * AlmaLinux 9
-      ```sh
-      sudo dnf config-manager --set-enabled crb
-      sudo dnf install @development ruby rubygem-bundler rubygem-irb ruby-devel libyaml-devel code
-      ```
-
-  3. Install gems
-      ```sh
-      bundle config set --local path vendor/bundle
-      bundle install
-      ```
-
-#### Vscode extensions
+### Setup
+##### Fedora Sway Atomic
+* Set up repo for github cli and vscode and installation
 ```sh
-code --install-extension tuttieee.emacs-mcx
-code --install-extension shopify.ruby-lsp
+cat fedora/vscode.repo | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+wget -O- /etc/yum.repos.d/gh-cli.repo |\
+  sudo tee https://cli.github.com/packages/rpm/gh-cli.repo > /dev/null
+sudo rpm-ostree install code gh
+```
+
+* Install additional packages
+```sh
+sudo rpm-ostree install --reboot racket emacs texmacs wireshark graphviz
+```
+
+* Configure sway
+```sh
+mkdir ~/.config/{sway,waybar}
+cp fedora/sway-config ~/.config/sway/config
+cp fedora/waybar-config.jsonc ~/.config/waybar/
+```
+
+#### NixOS
+* Make configuration ready
+```sh
+sudo cp nixos/*.nix /etc/nixos/
+```
+
+* Switch
+```
+sudo nixos-rebuild switch
 ```
