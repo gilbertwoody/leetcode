@@ -10,7 +10,7 @@
 
 * Install additional packages
   ```sh
-  sudo rpm-ostree install --reboot emacs texmacs wireshark graphviz
+  sudo rpm-ostree install --reboot emacs texmacs wireshark graphviz evince
   ```
 
 * Configure sway
