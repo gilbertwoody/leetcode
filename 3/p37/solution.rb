@@ -33,8 +33,7 @@ def solve_sudoku(board)
         fill[r, c, guess]
         board[r][c] = guess.to_s
 
-        found = dfs[n + 1]
-        return found if found
+        return true if dfs[n + 1]
 
         fill[r, c, guess, false]
       end
